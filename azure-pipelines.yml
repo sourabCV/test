@@ -8,7 +8,6 @@ trigger:
 
 pool:
   name: 'default'
-  vmImage: 'raspberrypi'
 
 steps:
 - script: echo Hello, world!
