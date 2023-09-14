@@ -20,5 +20,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: CmdLine@2
   inputs:
-    script: 'mkdir testF'
-    workingDirectory: '/home/pi'
+    script: |
+      git clone https://github.com/sourabCV/test.git
+      python3 /home/pi/DS/test/hello.py
+    workingDirectory: '/home/pi/DS'
