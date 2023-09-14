@@ -21,6 +21,8 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
+      rm -rf *
       git clone https://github.com/sourabCV/test.git
-      python3 /home/pi/DS/test/hello.py
+      sudo kill -9 `sudo lsof -t -i:5001`
+      nohup python3 /home/pi/DS/test/hello.py &
     workingDirectory: '/home/pi/DS'
