@@ -24,5 +24,5 @@ steps:
       rm -rf *
       git clone https://github.com/sourabCV/test.git
       sudo kill -9 `sudo lsof -t -i:5001`
-      python3 /home/pi/DS/test/runProgram.py
+      python3 /home/pi/DS/test/hello.py 2>&1 &
     workingDirectory: '/home/pi/DS'
