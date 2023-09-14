@@ -6,15 +6,11 @@
 trigger:
 - main
 
-strategy:
-  matrix:
-    caterpillar:
-      imageName: "caterpillar"
-  maxParallel: 1
+
 
 pool:
   name: 'default'
-  vmImage: $(imageName)
+  vmImage: "caterpillar"
 
 steps:
 - script: echo Hello, world!
