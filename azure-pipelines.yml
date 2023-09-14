@@ -6,11 +6,17 @@
 trigger:
 - main
 
-
+strategy:
+  matrix:
+    linux:
+      imageName: "raspberrypi"
+    mac:
+      imageName: "caterpillar"
+  maxParallel: 2
 
 pool:
   name: 'default'
-  vmImage: "caterpillar"
+  vmImage: $(imageName)
 
 steps:
 - script: echo Hello, world!
